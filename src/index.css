@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+body {
+	line-height: 1.6;
+  	overflow-x: clip;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.btn {
+	display: inline-block;
+	border: 0;
+	background: 0;
+	padding: .5em 1.5em;
+	font-size: 1.125rem;
+	font-weight: 700;
+	transition: 250ms;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2.5rem;
+}
+
+.flow-content--s > * + *  {
+	margin-top: .5rem !important;
+}
+.flow-content--m > * + *  {
+	margin-top: 1rem !important;
+}
+.flow-content--xm > * + *  {
+	margin-top: 1.5rem !important;
+}
+.flow-content--l > * + *  {
+	margin-top: 3rem !important;
+}
+.flow-content--xl > * + *  {
+	margin-top: 3.5rem !important;
+}
+
+.grid--1x3 {
+	display:  grid;
+	grid-template-columns: 350px 2fr 1fr;
+}
+
+.height {
+	min-height: calc(100vh - 73px);
+}
+
+@media screen and (max-width: 78.125em) {
+	.widgets {
+		@apply hidden;
+	}
+
+.grid--1x3 {
+	display:  grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+}
+
+@media screen and (max-width: 56.875em) {
+
+.grid--1x3 {
+	display:  grid;
+	grid-template-columns: 1fr ;
+}
+
+}
+
+@media screen and (max-width: 34.375em) {
+.grid--1x3 {
+	display:  grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+}
+
+}
